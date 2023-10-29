@@ -49,7 +49,6 @@ button {
     display: inline-block;
     text-decoration: none;
     color: inherit;
-    transition-property: color;
 }
 
 .container{
@@ -76,6 +75,9 @@ button {
 
 .header{
     border-bottom: 1px solid var(--cornflower-color);
+    box-shadow:0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-nav{
@@ -121,10 +123,12 @@ button {
 .header-link{
     padding: 24px 0px;
     position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link-add{
     padding: 24px 0px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link::after{
@@ -133,7 +137,8 @@ button {
     width: 100%;
     height: 4px;
     position: absolute;
-    bottom: 24px;
+    left: 0;
+    bottom: -1px;
 
     background-color: transparent;
     border-radius: 2px;
@@ -218,6 +223,7 @@ button {
     margin-left: auto;
     min-width: 169px;
     height: 56px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .first-section-btn:hover, .first-section-btn:focus{
@@ -330,6 +336,9 @@ width: calc((100% - 72px) / 4);
     width: calc((100 - 24*3) / 4);
     background-color: var(--white-color);
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .team-list-h{
@@ -353,13 +362,23 @@ width: calc((100% - 72px) / 4);
 }
 
 .team-icon-list-item{
+    width: 40px;
+    height: 40px;
+}
+
+.team-icon-list-link{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    width: 100%;
+    height: 100%;
     background-color: var(--iris-color);
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-icon-list-link:hover, .team-icon-list-link:focus{
+    background-color: var(--ocean-color);
 }
 
 .team-icon{
@@ -396,18 +415,25 @@ width: calc((100% - 72px) / 4);
 }
 
 .customers-list-item{
+    width: calc((100% - 120px) / 6);
+    height: 88px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customers-list-link{
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--light-slate-color);
+    color: var(--light-slate-color);
+    border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 168px;
-    height: 88px;
-    border-radius: 4px;
-    border: 1px solid var(--light-slate-color);
-    color: var(--light-slate-color);
 }
 
 .customers-list-item:hover{
-    border: 1px solid var(--ocean-color);
+    border-color: var(--ocean-color);
     color: var(--ocean-color);
 }
 
