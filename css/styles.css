@@ -49,6 +49,7 @@ button {
     display: inline-block;
     text-decoration: none;
     color: inherit;
+    transition-property: color;
 }
 
 .container{
@@ -119,19 +120,31 @@ button {
 
 .header-link{
     padding: 24px 0px;
+    position: relative;
 }
 
-.header-link.current{
-    color: var(--ocean-color);
+.header-link-add{
+    padding: 24px 0px;
 }
 
-.header-link.current::after{
+.header-link::after{
     content: "";
     display: block;
     width: 100%;
     height: 4px;
-    background-color: var(--ocean-color);
+    position: absolute;
+    bottom: 24px;
+
+    background-color: transparent;
     border-radius: 2px;
+}
+
+.header-link.current {
+    color: var(--ocean-color);
+}
+
+.header-link::after.current{
+    background-color: var(--ocean-color);
 }
 
 .header-list-item{
