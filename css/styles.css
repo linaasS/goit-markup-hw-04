@@ -591,7 +591,7 @@ width: calc((100% - 72px) / 4);
     overflow: hidden;
 }
 
-.portfolio-link.all-list-item-img-p{
+.all-list-item-img-p{
     position: absolute;
     top: 0;
     font-size: 16px;
