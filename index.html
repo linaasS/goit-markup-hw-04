@@ -63,7 +63,9 @@
       <section class="first-section">
         <div class="first-section-div container">
           <h1 class="first-section-h">Effective Solutions for Your Business</h1>
-          <button class="first-section-btn" type="button">Order Service</button>
+          <button class="first-section-btn" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <!-- Benefits -->
@@ -434,5 +436,21 @@
         </div>
       </div>
     </footer>
+    <!-- Модальне вікно -->
+    <div class="overlay is-hidden" data-modal>
+      <div class="modal">
+        <button
+          class="modal-btn"
+          type="button"
+          aria-label="Modal close button"
+          data-modal-close
+        >
+          <svg class="modal-btn-svg" width="8px" height="8px">
+            <use href="./images/icons.svg#icon-close-icon"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
